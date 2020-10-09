@@ -1,0 +1,1 @@
+-define(SUPERVISOR, kaves_sup).
