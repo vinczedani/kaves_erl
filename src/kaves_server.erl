@@ -45,6 +45,9 @@ init({TableName, TableDef}) ->
             {ok, {TableName, TableDef}}
     end.
 
+terminate(_Reason, {TableName, _}) ->
+    dets:close(TableName).
+
 handle_call({set, Key, Value}, _, State) ->
     lager:info("Kaves service setting ~p ~p", [Key, Value]),
     {TableName, _} = State,
