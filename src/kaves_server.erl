@@ -5,7 +5,7 @@
 -include("kaves.hrl").
 
 -export([start/2, start_link/2, set/3, get/2, del/2]).
--export([init/1, handle_call/3, handle_cast/2, handle_info/2, handle_continue/2]).
+-export([init/1, terminate/2, handle_call/3, handle_cast/2, handle_info/2, handle_continue/2]).
 
 % Client API
 set(Server, Key, Value) ->
